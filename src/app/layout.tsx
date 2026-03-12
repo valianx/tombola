@@ -4,6 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Gran Ruleta Juegalo",
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({
