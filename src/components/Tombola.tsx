@@ -16,7 +16,8 @@ export default function Tombola() {
   const [message, setMessage] = useState("");
   const [winnerName, setWinnerName] = useState("");
   const [bgUrl, setBgUrl] = useState<string | null>(null);
-  const confettiRef = useRef<typeof import("canvas-confetti").default | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const confettiRef = useRef<any>(null);
   const isDrawing = useRef(false);
 
   // SSE: other tabs see the draw animation in real-time

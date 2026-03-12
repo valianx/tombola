@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import redis from "@/lib/redis";
-import { notifyClients } from "@/app/api/events/route";
+import { notifyClients } from "@/lib/sse";
 
 // POST /api/winner — weighted random draw
 // Returns { id, name?, isWinner, drawNumber, winnerPosition }

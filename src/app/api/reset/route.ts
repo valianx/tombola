@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import redis from "@/lib/redis";
-import { notifyClients } from "@/app/api/events/route";
+import { notifyClients } from "@/lib/sse";
 
 // POST /api/reset — clear winners and restore all participants to the pool
 export async function POST() {

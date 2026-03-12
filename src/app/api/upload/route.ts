@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import * as XLSX from "xlsx";
 import redis from "@/lib/redis";
-import { notifyClients } from "@/app/api/events/route";
+import { notifyClients } from "@/lib/sse";
 
 // POST /api/upload — parse Excel/CSV file, load participants into Redis
 export async function POST(req: NextRequest) {
