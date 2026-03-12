@@ -142,13 +142,23 @@ export default function Dashboard() {
     }
   };
 
+  const [resetMsg, setResetMsg] = useState("");
+
   const handleResetSorteo = async () => {
-    if (!confirm("¿Estás seguro? Se limpiará la lista de ganadores.")) return;
+    if (!confirm("¿Estás seguro? Se limpiará la lista de seleccionados.")) return;
+    setResetMsg("");
     try {
       const res = await fetch("/api/reset", { method: "POST" });
       const data = await res.json();
-      if (!data.error) loadStats();
-    } catch {}
+      if (data.error) {
+        setResetMsg(`Error: ${data.error}`);
+      } else {
+        setResetMsg(data.message);
+        loadStats();
+      }
+    } catch (err) {
+      setResetMsg("Error de conexión");
+    }
   };
 
   const handleExportWinners = async () => {
@@ -467,6 +477,9 @@ export default function Dashboard() {
               Limpiar Sorteo
             </button>
           </div>
+          {resetMsg && (
+            <p style={{ color: "#7fff7f", marginBottom: 12 }}>{resetMsg}</p>
+          )}
           {/* Winners table */}
           {stats && stats.winners.length > 0 ? (
             <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: 16 }}>
