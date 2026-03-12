@@ -1,0 +1,63 @@
+body, html {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+}
+
+body{
+  background-color: #001C31 !important;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box_numbre_id{
+  background:  linear-gradient(#000, #000 ) 50% 50%/calc(100% - 2px) calc(100% - 2px) no-repeat,linear-gradient(90deg, #efa900 0%, #ffd700 50%, #efa900 100%);
+  border-radius: 10px;
+  border: solid 5px ;
+  border-image:  linear-gradient(180deg, #feb302, #ffd900da) 1;
+  color: white;
+  font-size: 75px;
+  height: 140px;
+}
+
+.caja_numeros{
+  margin-top: 390px;
+}
+
+.img_bajada{
+  max-width: 50%;
+}
+
+.botones {
+  background-color: #ffa800;
+  color: #102234;
+  padding: 20px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: 1px solid #ffa800;
+  margin-left: 50px ;
+  margin-right: 50px;
+  width: 200px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+#BtnAlAgua {
+  display: none;
+}
+
+.col .orden_boton {
+  align-items: center;
+}
+
+#message {
+  color: white;
+  font-size: 26px;
+}
+
+#winnerName {
+  color: #ffd700;
+  font-size: 22px;
+  margin-top: 8px;
+}
