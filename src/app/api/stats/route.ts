@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import redis from "@/lib/redis";
 
+export const dynamic = "force-dynamic";
+
 // GET /api/stats — returns statistics + winner list
 export async function GET() {
   try {

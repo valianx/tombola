@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import redis from "@/lib/redis";
 
+export const dynamic = "force-dynamic";
+
 const REDIS_KEY = "tombola:background";
 
 // GET /api/background — returns current background image URL

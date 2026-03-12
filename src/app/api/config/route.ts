@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import redis from "@/lib/redis";
 
+export const dynamic = "force-dynamic";
+
 const KEY = "tombola:config";
 
 // GET /api/config — returns { winnerPosition, currentDraw }
